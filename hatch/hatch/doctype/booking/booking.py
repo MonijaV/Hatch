@@ -12,8 +12,8 @@ class Booking(Document):
         self.check_capacity()
         
     def validate_time(self):
-        start = self.start_time
-        end = self.end_time
+        start = get_datetime(f"2000-01-01 {self.start_time}")
+        end = get_datetime(f"2000-01-01 {self.end_time}")
         if end <= start:
             frappe.throw("End Time must be After the Start Time.")
             

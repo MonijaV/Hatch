@@ -262,10 +262,20 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
-fixtures=["Resource"]
+fixtures=["Resource","Role"]
 
 # permission_query_conditions = {
 #     "Booking": "hatch.permissions.booking_query",
 # }
+
+doc_events = {
+    "*": {
+        "on_update": "hatch.audit.log_change",
+        "on_submit": "hatch.audit.log_change",
+        "on_cancel": "hatch.audit.log_change",
+    }
+}
+
+after_install = "hatch.install.after_install"
 
 
