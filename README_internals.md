@@ -102,6 +102,10 @@ The whitelisted cancellation method performs the controlled server-side cancella
 2.Audit Log creation
 The audit hook must be able to create an Audit Log entry even when the triggering user does not have normal create permission on the Audit Log DocType.
 
+### Video Clip
+
+https://drive.google.com/file/d/1peRz6Em8yDLuoW1danxFJbYs1G0L93ud/view?usp=sharing
+
 
 
 
