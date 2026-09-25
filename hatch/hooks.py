@@ -278,4 +278,10 @@ doc_events = {
 
 after_install = "hatch.install.after_install"
 
+scheduler_events = {
+    "hourly": [
+        "hatch.schedule.release_expired_holds"
+    ],
+}
+
 

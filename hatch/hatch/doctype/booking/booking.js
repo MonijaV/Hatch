@@ -35,6 +35,7 @@ frappe.ui.form.on("Booking", {
                                         indicator: "green"
                                     });
                                     dialog.hide();
+                                    frm.trigger("resource");
                                 }
                             }
                         });

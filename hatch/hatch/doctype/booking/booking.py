@@ -83,7 +83,11 @@ class Booking(Document):
             frappe.throw("Only Draft or Cancelled bookings can be deleted")
             
     # def on_update(self):
+    #     self.total_amount = (sum(row.amount for row in self.addons)+ self.base_amount)
     #     self.save()
+
+    def before_print(self, print_format=None):
+        self.print_summary = (f"{self.member} - {self.resource} on {self.booking_date}")
 
 def send_confirmation_email(booking_name):
     booking = frappe.get_doc("Booking",booking_name)
